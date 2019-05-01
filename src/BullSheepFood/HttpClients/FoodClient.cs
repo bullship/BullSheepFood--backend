@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
-using BullSheepFood.Models.Food;
+using BullSheepFood.Models.FoodApi;
 
 namespace BullSheepFood.HttpClients
 {

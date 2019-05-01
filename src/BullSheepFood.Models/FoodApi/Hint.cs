@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
-namespace BullSheepFood.Models.Food
+namespace BullSheepFood.Models.FoodApi
 {
     public class Hint
     {
         [JsonProperty("food")]
-        public Food Food { get; set; }
+        public FoodApi.Food Food { get; set; }
 
         //[JsonProperty("measures")]
         //public List<Measure> Measures { get; set; }

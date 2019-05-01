@@ -1,8 +1,14 @@
 ﻿using System;
+using BullSheepFood.Data;
+using BullSheepFood.Data.Repositories;
+using BullSheepFood.Data.Repositories.Abstractions;
+using BullSheepFood.Data.Services;
+using BullSheepFood.Data.Services.Abstractions;
 using BullSheepFood.HttpClients;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
@@ -25,8 +31,13 @@ namespace BullSheepFood
 
             services.AddSingleton<IConfiguration>(Configuration);
 
+            services.AddDbContext<BullSheepDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:BullSheepDb"]));
+
             services.AddHttpClient<FoodClient>(client =>
                 client.BaseAddress = new Uri(Configuration["FoodDatabaseAPI:Url"]));
+
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductService, ProductService>();
 
             services.AddSwaggerGen(c =>
             {

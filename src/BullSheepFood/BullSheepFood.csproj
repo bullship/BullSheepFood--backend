@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BullSheepFood.Data\BullSheepFood.Data.csproj" />
     <ProjectReference Include="..\BullSheepFood.Models\BullSheepFood.Models.csproj" />
   </ItemGroup>
 
