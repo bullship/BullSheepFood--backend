@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using BullSheepFood.HttpClients;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +22,11 @@ namespace BullSheepFood
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddSingleton<IConfiguration>(Configuration);
+
+            services.AddHttpClient<FoodClient>(client =>
+                client.BaseAddress = new Uri(Configuration["FoodDatabaseAPI:Url"]));
 
             services.AddSwaggerGen(c =>
             {
