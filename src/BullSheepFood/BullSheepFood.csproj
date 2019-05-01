@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\BullSheepFood.Models\BullSheepFood.Models.csproj" />
+    <ProjectReference Include="..\BullSheepFood.Models\BullSheepFood.Models.csproj" />
   </ItemGroup>
 
 </Project>
