@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace BullSheepFood.Models.Food
+namespace BullSheepFood.Models.FoodApi
 {
     public class FoodResponse
     {
