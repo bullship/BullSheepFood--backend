@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace BullSheepFood.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class FoodController : ControllerBase
     {
