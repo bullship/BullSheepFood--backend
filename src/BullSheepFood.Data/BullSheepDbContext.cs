@@ -11,5 +11,11 @@ namespace BullSheepFood.Data
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<TypeMeal> TypeMeals { get; set; }
+        public DbSet<Diet> Diets { get; set; }
+
+
+
     }
 }

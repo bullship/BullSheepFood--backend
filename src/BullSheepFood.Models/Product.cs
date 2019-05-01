@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace BullSheepFood.Models
@@ -13,5 +14,8 @@ namespace BullSheepFood.Models
         public double Fat { get; set; }
         public double Carbohydrate { get; set; }
         public string ImageUri { get; set; }
+
+        public ICollection<Diet> Diet { get; set; }
+
     }
 }
