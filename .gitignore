@@ -1,3 +1,7 @@
 src/.vs/
 src/BullSheepFood/bin/
 src/BullSheepFood/obj/
+BullSheepFood.Models/obj/
+BullSheepFood.Models/bin/
+src/BullSheepFood.Models/bin/
+src/BullSheepFood.Models/obj/
