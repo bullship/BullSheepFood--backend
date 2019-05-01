@@ -15,7 +15,7 @@ namespace BullSheepFood.Models
         public double Carbohydrate { get; set; }
         public string ImageUri { get; set; }
 
-        public ICollection<Diet> Diet { get; set; }
+        public ICollection<DietToProduct> DietToProduct { get; set; }
 
     }
 }
