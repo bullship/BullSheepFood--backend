@@ -61,7 +61,7 @@ namespace BullSheepFood.Controllers
             }
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public IActionResult Put([FromBody] Product product)
         {
             try
